@@ -96,7 +96,7 @@ You can now test the connection to the new database using the `psql` command:
 ```bash
 psql -U your_user -d your_database -h localhost
 ```
-
+----
 # creating db on docker
 To access PostgreSQL running in a Docker container, you can use the `docker exec` command to execute a command inside the container. Here are the steps:
 
@@ -162,3 +162,57 @@ You can test the connection to the new database from your host machine using the
 ```bash
 psql -h localhost -U your_user -d your_database -W
 ```
+----
+# common plsql command
+To browse a PostgreSQL database, you can use the `psql` command-line tool or a graphical user interface (GUI) tool like pgAdmin. Below are some common PostgreSQL commands that you can use in the `psql` command-line interface to interact with and browse the database:
+
+1. **Connect to a Database:**
+   ```bash
+   psql -U username -d database_name -h host -p port
+   ```
+   Replace `username`, `database_name`, `host`, and `port` with your actual PostgreSQL username, database name, host, and port.
+
+2. **List Databases:**
+   ```sql
+   \l
+   ```
+
+3. **Connect to a Different Database:**
+   ```sql
+   \c database_name
+   ```
+
+4. **List Tables:**
+   ```sql
+   \dt
+   ```
+
+5. **Show Table Structure:**
+   ```sql
+   \d table_name
+   ```
+
+6. **Display Table Data:**
+   ```sql
+   SELECT * FROM table_name;
+   ```
+
+7. **Describe Table Columns:**
+   ```sql
+   \d+ table_name
+   ```
+
+8. **Execute SQL Query:**
+   ```sql
+   SELECT column1, column2 FROM table_name WHERE condition;
+   ```
+
+9. **Exit `psql`:**
+   ```sql
+   \q
+   ```
+
+10. **Help:**
+    ```sql
+    \?
+    ```
